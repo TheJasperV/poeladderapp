@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poedata-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poedata
+  template:
+    metadata:
+      labels:
+        app: poedata
+    spec:
+      containers:
+      - name: poedata
+        image: jasper9119/poedata:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
