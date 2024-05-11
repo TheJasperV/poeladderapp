@@ -6,7 +6,7 @@ app = Flask(__name__)
 data_cache = {}
 
 # Endpoint to fetch data from the external API
-@app.route('/api/poedata/fetch', methods=['GET'])
+@app.route('/api/poedata/data', methods=['GET'])
 def fetch_data():
     # Check if data is already cached
     if 'data' in data_cache:

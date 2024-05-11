@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: poedata
-        image: jasper9119/poedata:latest
+        image: jasper9119/poedata-arm64:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
